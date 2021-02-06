@@ -1,7 +1,275 @@
+.m1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0rem;
+}
+
+.p1 {
+  padding: 1rem;
+}
+
+.py-1 {
+  padding: 1rem 0rem;
+}
+
+.m2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0rem;
+}
+
+.p2 {
+  padding: 2rem;
+}
+
+.py-2 {
+  padding: 2rem 0rem;
+}
+
+.m3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0rem;
+}
+
+.p3 {
+  padding: 3rem;
+}
+
+.py-3 {
+  padding: 3rem 0rem;
+}
+
+.m4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0rem;
+}
+
+.p4 {
+  padding: 4rem;
+}
+
+.py-4 {
+  padding: 4rem 0rem;
+}
+
+.m5 {
+  margin: 5rem;
+}
+
+.my-5 {
+  margin: 5rem 0rem;
+}
+
+.p5 {
+  padding: 5rem;
+}
+
+.py-5 {
+  padding: 5rem 0rem;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.circle {
+  background-color: #3b3054;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+}
+
+body {
+  background-color: #efeaf7;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+body button:focus {
+  outline: none;
+}
+body h1 {
+  color: #232127;
+  line-height: 1.2;
+  font-weight: 700;
+}
+body h2 {
+  color: #232127;
+  font-weight: 700;
+}
+body h3 {
+  color: #232127;
+  font-weight: 700;
+}
+body p {
+  font-size: 18px;
+  color: #807c8d;
+  font-weight: 500;
+}
+body ul {
+  list-style: none;
+}
+body main {
+  max-width: 100%;
+}
+body a {
+  text-decoration: none;
+}
+body input:focus {
+  outline: none;
+  border: 1px solid #f46262;
+  border-radius: 8px;
+}
+
+@media (max-width: 575.98px) {
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  body a {
+    color: white;
+  }
+  body .getStarted-btn {
+    border-radius: 100px;
+    color: white;
+    background-color: #2acfcf;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px 35px;
+  }
+  body .signUp-btn {
+    border-radius: 100px;
+    color: white;
+    background-color: #2acfcf;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 85px;
+  }
+  body .shorten-btn {
+    border-radius: 8px;
+    color: white;
+    background-color: #2acfcf;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0;
+    width: 230px;
+  }
+
+  header {
+    max-width: 100%;
+    background-color: white;
+  }
+  header img {
+    max-width: 100%;
+    height: 220px;
+  }
+
+  nav {
+    max-width: 100%;
+    padding: 25px 0px;
+  }
+  nav img {
+    max-width: 100%;
+    height: 30px;
+  }
+  nav .flexContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .flexContainer button {
+    display: none;
+  }
+  nav .flexContainer .burgerMenu {
+    width: 30px;
+    height: 40px;
+    margin: 0;
+    max-width: 100%;
+  }
+  nav .flexContainer .burgerMenu .bar {
+    height: 4px;
+    width: 100%;
+    margin: 6px 0px;
+    background-color: #807c8d;
+  }
+  nav .flexContainer .navigationLinks {
+    display: none;
+  }
+  nav .burgerLinks {
+    width: 100%;
+    max-width: 100%;
+    background-color: #3b3054;
+    border-radius: 8px;
+  }
+
+  main .formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    max-width: 100%;
+    background-image: url("/images/bg-shorten-mobile.svg");
+    background-color: #3b3054;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    border-radius: 10px;
+  }
+  main .formContainer input {
+    width: 230px;
+    max-width: 100%;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+  }
+  main .formContainer input:focus {
+    outline: none;
+    border: 1px solid #f46262;
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  main .formContainer input:focus::placeholder {
+    color: transparent;
+  }
+  main .formContainer input::-webkit-input-placeholder {
+    padding: 0rem 1rem;
+  }
+  main .formContainer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }
+  main .card {
+    background-color: white;
+    border-radius: 8px;
+  }
+  main .card p {
+    margin: 10px auto;
+    width: 80%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,64 @@
+@import "_utilities";
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+.circle {
+  background-color: $primary-violet;
+  @include setFlex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 85px;
+  height: 85px;
+  border-radius: 100%;
+}
+body {
+  background-color: $backgroundColor;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+  h1 {
+    color: $DarkPurpleColor;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  h2 {
+    color: $DarkPurpleColor;
+    font-weight: 700;
+  }
+  h3 {
+    color: $DarkPurpleColor;
+    font-weight: 700;
+  }
+  p {
+    font-size: 18px;
+    color: $lightBlue;
+    font-weight: 500;
+  }
+  ul {
+    list-style: none;
+  }
+  main {
+    max-width: 100%;
+  }
+  a {
+    text-decoration: none;
+  }
+  input {
+    &:focus {
+      outline: none;
+      border: 1px solid $secondary-red;
+      border-radius: 8px;
+    }
+  }
+}
+
+@import "_mobile";
