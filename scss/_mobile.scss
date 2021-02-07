@@ -1,51 +1,216 @@
-$breakpoint-xs: 575.98px;
+$breakpoint-xs: 576px;
 $breakpoint-phone: 767.98px;
-$breakpoint-tablet: 991.98px;
-$breakpoint-desktop: 1199.98px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+$breakpoint-desktopXL: 1200px;
 
-@media (max-width: $breakpoint-xs) {
-  .wrapper {
+.line {
+  position: absolute;
+  height: 65rem;
+  width: 5px;
+  background-color: $primary-cyan;
+  top: 95rem;
+  left: 50%;
+  z-index: -1;
+}
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+body {
+  a {
+    color: $cardColor;
+  }
+
+  .getStarted-btn {
+    @include styleButton(100px);
+    padding: 15px 35px;
+  }
+  .signUp-btn {
+    @include styleButton(100px);
+    padding: 10px 85px;
+  }
+  .shorten-btn {
+    @include styleButton(8px);
+    padding: 10px 0;
+    width: 230px;
+  }
+}
+header {
+  max-width: 100%;
+  background-color: $cardColor;
+  height: 55rem;
+  img {
+    max-width: 100%;
+    height: 220px;
+  }
+}
+nav {
+  max-width: 100%;
+
+  img {
+    max-width: 100%;
+    height: 30px;
+  }
+  .flexContainer {
+    button {
+      display: none;
+    }
+    max-width: 100%;
+    @include setFlex;
+
+    justify-content: space-between;
+
+    .burgerMenu {
+      width: 30px;
+      height: 40px;
+      margin: 0;
+
+      max-width: 100%;
+      .bar {
+        height: 4px;
+        width: 100%;
+        margin: 6px 0px;
+        background-color: $lightBlue;
+      }
+    }
+
+    .navigationLinks {
+      display: none;
+    }
+  }
+  .burgerLinks {
     width: 90%;
+    display: none;
+    max-width: 100%;
+    background-color: $primary-violet;
+    position: absolute;
+    border-radius: 8px;
+  }
+}
+main {
+  .formContainer {
+    position: absolute;
+    width: 90%;
+    max-width: 100%;
+    background-image: url("/images/bg-shorten-mobile.svg");
+    background-color: $primary-violet;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 185px;
+    border-radius: 10px;
+    top: 50rem;
+    form {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    input {
+      width: 230px;
+      max-width: 100%;
+      height: 45px;
+      border-radius: 8px;
+      border: none;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $secondary-red;
+        border-radius: 8px;
+        padding: 1rem;
+      }
+      &:focus::placeholder {
+        color: transparent;
+      }
+      &::-webkit-input-placeholder {
+        padding: 0rem 1rem;
+      }
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+    }
+  }
+  .card {
+    background-color: $cardColor;
+    border-radius: 8px;
+    p {
+      margin: 10px auto;
+      width: 80%;
+    }
+  }
+  .getStarted {
+    max-width: 100%;
+    background-image: url("/images/bg-boost-mobile.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $primary-violet;
+    h2 {
+      color: $cardColor;
+    }
+  }
+}
+footer {
+  background-color: $DarkPurpleColor;
+  .socialMediaLinks {
+    img {
+      margin: 0rem 0.5rem;
+    }
+  }
+}
+@media (min-width: $breakpoint-tablet) and (max-width: 1198px) {
+  body {
+    h1 {
+      width: 25rem;
+      margin: 0 auto;
+    }
+    p {
+      width: 25rem;
+      margin: 0 auto;
+    }
+  }
+  header {
+    height: 69rem;
+  }
+  .line {
+    display: none;
+  }
+  main {
+    .formContainer {
+      top: 63rem;
+    }
+  }
+}
+@media (min-width: $breakpoint-desktopXL) {
+  .burgerLogo {
+    display: none;
+  }
+  .wrapper {
+    width: 80%;
     margin: 0 auto;
     max-width: 100%;
   }
   body {
-    a {
-      color: $cardColor;
+    h1 {
+      width: 35rem;
+      margin: 0 auto;
+      font-size: 75px;
     }
-
-    .getStarted-btn {
-      @include styleButton(100px);
-      padding: 15px 35px;
-    }
-    .signUp-btn {
-      @include styleButton(100px);
-      padding: 10px 85px;
-    }
-    .shorten-btn {
-      @include styleButton(8px);
-      padding: 10px 0;
-      width: 230px;
+    p {
+      width: 35rem;
+      margin: 0 auto;
     }
   }
   header {
-    max-width: 100%;
-    background-color: $cardColor;
-    img {
-      max-width: 100%;
-      height: 220px;
-    }
-  }
-  nav {
-    max-width: 100%;
-    padding: 25px 0px;
-    img {
-      max-width: 100%;
-      height: 30px;
-    }
+    height: 50rem;
+    text-align: left;
     .flexContainer {
       button {
-        display: none;
+        display: block;
       }
       max-width: 100%;
       @include setFlex;
@@ -53,79 +218,87 @@ $breakpoint-desktop: 1199.98px;
       justify-content: space-between;
 
       .burgerMenu {
-        width: 30px;
-        height: 40px;
-        margin: 0;
-
-        max-width: 100%;
-        .bar {
-          height: 4px;
-          width: 100%;
-          margin: 6px 0px;
-          background-color: $lightBlue;
-        }
+        display: none;
       }
 
       .navigationLinks {
-        display: none;
+        @include setFlex;
+        ul {
+          display: flex;
+        }
+        a {
+          color: $lightBlue;
+        }
       }
     }
-    .burgerLinks {
-      width: 100%;
-      max-width: 100%;
-      background-color: $primary-violet;
-
-      border-radius: 8px;
+    .flex {
+      @include setFlex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        height: 400px;
+        max-width: 100%;
+      }
     }
   }
   main {
+    margin: 0 auto;
     .formContainer {
-      @include setFlex;
-      align-items: center;
-      justify-content: center;
-      flex-flow: column;
+      position: absolute;
+      width: 80%;
+      text-align: center;
       max-width: 100%;
       background-image: url("/images/bg-shorten-mobile.svg");
       background-color: $primary-violet;
-      background-position: right;
+      background-position: bottom;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 150px;
+      height: 185px;
       border-radius: 10px;
-      input {
-        width: 230px;
-        max-width: 100%;
-        height: 45px;
-        border-radius: 8px;
-        border: none;
+      top: 42rem;
+    }
+  }
+  .line {
+    transform: rotate(90deg);
+    top: 50rem;
+    width: 10px;
+  }
+  .card {
+    width: 25rem;
+    max-width: 100%;
+    margin: 0px 15px;
+  }
+  .cardsContainer {
+    @include setFlex;
+    justify-content: center;
+  }
+  footer {
+    .wrapper {
+      display: flex;
 
-        &:focus {
-          outline: none;
-          border: 1px solid $secondary-red;
-          border-radius: 8px;
-          padding: 1rem;
-        }
-        &:focus::placeholder {
-          color: transparent;
-        }
-        &::-webkit-input-placeholder {
-          padding: 0rem 1rem;
-        }
-      }
-      form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-      }
-    }
-    .card {
-      background-color: $cardColor;
-      border-radius: 8px;
+      justify-content: center;
       p {
-        margin: 10px auto;
-        width: 80%;
+        width: 15rem;
       }
     }
+  }
+}
+@media (min-width: $breakpoint-desktop) and (max-width: 1399px) {
+  header {
+    height: 50rem;
+    .flex {
+      img {
+        height: 350px;
+      }
+    }
+    h1 {
+      font-size: 45px;
+    }
+  }
+  .line {
+    transform: rotate(90deg);
+    top: 68rem;
+    width: 10px;
+    height: 32rem;
   }
 }

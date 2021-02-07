@@ -3,7 +3,7 @@ $primary-violet: hsl(257, 27%, 26%);
 $secondary-red: hsl(0, 87%, 67%);
 $cardColor: hsl(0, 0%, 100%);
 $backgroundColor: rgb(239, 234, 247);
-$DarkPurpleColor: hsl(260, 8%, 14%);
+$DarkPurpleColor: hsl(260, 10%, 18%);
 $lightBlue: hsl(255, 7%, 52%);
 
 @mixin setFlex {
@@ -20,13 +20,13 @@ $lightBlue: hsl(255, 7%, 52%);
 $spaceamounts: (1, 2, 3, 4, 5);
 @each $space in $spaceamounts {
   .m#{$space} {
-    margin: #{$space}rem;
+    margin: 0rem #{$space}rem;
   }
   .my-#{$space} {
     margin: #{$space}rem 0rem;
   }
   .p#{$space} {
-    padding: #{$space}rem;
+    padding: 0rem #{$space}rem;
   }
   .py-#{$space} {
     padding: #{$space}rem 0rem;

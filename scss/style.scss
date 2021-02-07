@@ -15,12 +15,26 @@
   height: 85px;
   border-radius: 100%;
 }
+
+.divider {
+  width: 85%;
+  height: 0.2px;
+  background-color: $lightBlue;
+  margin: 0 auto;
+}
 body {
   background-color: $backgroundColor;
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 20px;
   button {
+    transition: 0.2s ease-in;
+    &:hover {
+      transition: 0.2s ease-in;
+      cursor: pointer;
+      transform: scale(1.05);
+      background-color: lighten($primary-cyan, 16%);
+    }
     &:focus {
       outline: none;
     }

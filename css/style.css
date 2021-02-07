@@ -1,5 +1,5 @@
 .m1 {
-  margin: 1rem;
+  margin: 0rem 1rem;
 }
 
 .my-1 {
@@ -7,7 +7,7 @@
 }
 
 .p1 {
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 
 .py-1 {
@@ -15,7 +15,7 @@
 }
 
 .m2 {
-  margin: 2rem;
+  margin: 0rem 2rem;
 }
 
 .my-2 {
@@ -23,7 +23,7 @@
 }
 
 .p2 {
-  padding: 2rem;
+  padding: 0rem 2rem;
 }
 
 .py-2 {
@@ -31,7 +31,7 @@
 }
 
 .m3 {
-  margin: 3rem;
+  margin: 0rem 3rem;
 }
 
 .my-3 {
@@ -39,7 +39,7 @@
 }
 
 .p3 {
-  padding: 3rem;
+  padding: 0rem 3rem;
 }
 
 .py-3 {
@@ -47,7 +47,7 @@
 }
 
 .m4 {
-  margin: 4rem;
+  margin: 0rem 4rem;
 }
 
 .my-4 {
@@ -55,7 +55,7 @@
 }
 
 .p4 {
-  padding: 4rem;
+  padding: 0rem 4rem;
 }
 
 .py-4 {
@@ -63,7 +63,7 @@
 }
 
 .m5 {
-  margin: 5rem;
+  margin: 0rem 5rem;
 }
 
 .my-5 {
@@ -71,7 +71,7 @@
 }
 
 .p5 {
-  padding: 5rem;
+  padding: 0rem 5rem;
 }
 
 .py-5 {
@@ -95,26 +95,42 @@
   border-radius: 100%;
 }
 
+.divider {
+  width: 85%;
+  height: 0.2px;
+  background-color: #807c8d;
+  margin: 0 auto;
+}
+
 body {
   background-color: #efeaf7;
   font-family: "Poppins", sans-serif;
   text-align: center;
   font-size: 20px;
 }
+body button {
+  transition: 0.2s ease-in;
+}
+body button:hover {
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: #6be1e1;
+}
 body button:focus {
   outline: none;
 }
 body h1 {
-  color: #232127;
+  color: #2c2932;
   line-height: 1.2;
   font-weight: 700;
 }
 body h2 {
-  color: #232127;
+  color: #2c2932;
   font-weight: 700;
 }
 body h3 {
-  color: #232127;
+  color: #2c2932;
   font-weight: 700;
 }
 body p {
@@ -137,138 +153,309 @@ body input:focus {
   border-radius: 8px;
 }
 
-@media (max-width: 575.98px) {
+.line {
+  position: absolute;
+  height: 65rem;
+  width: 5px;
+  background-color: #2acfcf;
+  top: 95rem;
+  left: 50%;
+  z-index: -1;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+body a {
+  color: white;
+}
+body .getStarted-btn {
+  border-radius: 100px;
+  color: white;
+  background-color: #2acfcf;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 35px;
+}
+body .signUp-btn {
+  border-radius: 100px;
+  color: white;
+  background-color: #2acfcf;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 85px;
+}
+body .shorten-btn {
+  border-radius: 8px;
+  color: white;
+  background-color: #2acfcf;
+  border: none;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 0;
+  width: 230px;
+}
+
+header {
+  max-width: 100%;
+  background-color: white;
+  height: 55rem;
+}
+header img {
+  max-width: 100%;
+  height: 220px;
+}
+
+nav {
+  max-width: 100%;
+}
+nav img {
+  max-width: 100%;
+  height: 30px;
+}
+nav .flexContainer {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav .flexContainer button {
+  display: none;
+}
+nav .flexContainer .burgerMenu {
+  width: 30px;
+  height: 40px;
+  margin: 0;
+  max-width: 100%;
+}
+nav .flexContainer .burgerMenu .bar {
+  height: 4px;
+  width: 100%;
+  margin: 6px 0px;
+  background-color: #807c8d;
+}
+nav .flexContainer .navigationLinks {
+  display: none;
+}
+nav .burgerLinks {
+  width: 90%;
+  display: none;
+  max-width: 100%;
+  background-color: #3b3054;
+  position: absolute;
+  border-radius: 8px;
+}
+
+main .formContainer {
+  position: absolute;
+  width: 90%;
+  max-width: 100%;
+  background-image: url("/images/bg-shorten-mobile.svg");
+  background-color: #3b3054;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 185px;
+  border-radius: 10px;
+  top: 50rem;
+}
+main .formContainer form {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main .formContainer input {
+  width: 230px;
+  max-width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+}
+main .formContainer input:focus {
+  outline: none;
+  border: 1px solid #f46262;
+  border-radius: 8px;
+  padding: 1rem;
+}
+main .formContainer input:focus::placeholder {
+  color: transparent;
+}
+main .formContainer input::-webkit-input-placeholder {
+  padding: 0rem 1rem;
+}
+main .formContainer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+main .card {
+  background-color: white;
+  border-radius: 8px;
+}
+main .card p {
+  margin: 10px auto;
+  width: 80%;
+}
+main .getStarted {
+  max-width: 100%;
+  background-image: url("/images/bg-boost-mobile.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #3b3054;
+}
+main .getStarted h2 {
+  color: white;
+}
+
+footer {
+  background-color: #2c2932;
+}
+footer .socialMediaLinks img {
+  margin: 0rem 0.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1198px) {
+  body h1 {
+    width: 25rem;
+    margin: 0 auto;
+  }
+  body p {
+    width: 25rem;
+    margin: 0 auto;
+  }
+
+  header {
+    height: 69rem;
+  }
+
+  .line {
+    display: none;
+  }
+
+  main .formContainer {
+    top: 63rem;
+  }
+}
+@media (min-width: 1200px) {
+  .burgerLogo {
+    display: none;
+  }
+
   .wrapper {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     max-width: 100%;
   }
 
-  body a {
-    color: white;
+  body h1 {
+    width: 35rem;
+    margin: 0 auto;
+    font-size: 75px;
   }
-  body .getStarted-btn {
-    border-radius: 100px;
-    color: white;
-    background-color: #2acfcf;
-    border: none;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 15px 35px;
-  }
-  body .signUp-btn {
-    border-radius: 100px;
-    color: white;
-    background-color: #2acfcf;
-    border: none;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 10px 85px;
-  }
-  body .shorten-btn {
-    border-radius: 8px;
-    color: white;
-    background-color: #2acfcf;
-    border: none;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 10px 0;
-    width: 230px;
+  body p {
+    width: 35rem;
+    margin: 0 auto;
   }
 
   header {
-    max-width: 100%;
-    background-color: white;
+    height: 50rem;
+    text-align: left;
   }
-  header img {
-    max-width: 100%;
-    height: 220px;
-  }
-
-  nav {
-    max-width: 100%;
-    padding: 25px 0px;
-  }
-  nav img {
-    max-width: 100%;
-    height: 30px;
-  }
-  nav .flexContainer {
+  header .flexContainer {
     max-width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  nav .flexContainer button {
+  header .flexContainer button {
+    display: block;
+  }
+  header .flexContainer .burgerMenu {
     display: none;
   }
-  nav .flexContainer .burgerMenu {
-    width: 30px;
-    height: 40px;
-    margin: 0;
+  header .flexContainer .navigationLinks {
+    display: flex;
+  }
+  header .flexContainer .navigationLinks ul {
+    display: flex;
+  }
+  header .flexContainer .navigationLinks a {
+    color: #807c8d;
+  }
+  header .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .flex img {
+    height: 400px;
     max-width: 100%;
-  }
-  nav .flexContainer .burgerMenu .bar {
-    height: 4px;
-    width: 100%;
-    margin: 6px 0px;
-    background-color: #807c8d;
-  }
-  nav .flexContainer .navigationLinks {
-    display: none;
-  }
-  nav .burgerLinks {
-    width: 100%;
-    max-width: 100%;
-    background-color: #3b3054;
-    border-radius: 8px;
   }
 
+  main {
+    margin: 0 auto;
+  }
   main .formContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
+    position: absolute;
+    width: 80%;
+    text-align: center;
     max-width: 100%;
     background-image: url("/images/bg-shorten-mobile.svg");
     background-color: #3b3054;
-    background-position: right;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 150px;
+    height: 185px;
     border-radius: 10px;
+    top: 42rem;
   }
-  main .formContainer input {
-    width: 230px;
+
+  .line {
+    transform: rotate(90deg);
+    top: 50rem;
+    width: 10px;
+  }
+
+  .card {
+    width: 25rem;
     max-width: 100%;
-    height: 45px;
-    border-radius: 8px;
-    border: none;
+    margin: 0px 15px;
   }
-  main .formContainer input:focus {
-    outline: none;
-    border: 1px solid #f46262;
-    border-radius: 8px;
-    padding: 1rem;
-  }
-  main .formContainer input:focus::placeholder {
-    color: transparent;
-  }
-  main .formContainer input::-webkit-input-placeholder {
-    padding: 0rem 1rem;
-  }
-  main .formContainer form {
+
+  .cardsContainer {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-flow: column;
   }
-  main .card {
-    background-color: white;
-    border-radius: 8px;
+
+  footer .wrapper {
+    display: flex;
+    justify-content: center;
   }
-  main .card p {
-    margin: 10px auto;
-    width: 80%;
+  footer .wrapper p {
+    width: 15rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1399px) {
+  header {
+    height: 50rem;
+  }
+  header .flex img {
+    height: 350px;
+  }
+  header h1 {
+    font-size: 45px;
+  }
+
+  .line {
+    transform: rotate(90deg);
+    top: 68rem;
+    width: 10px;
+    height: 32rem;
   }
 }
 
