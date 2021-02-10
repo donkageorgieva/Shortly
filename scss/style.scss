@@ -5,6 +5,10 @@
   margin: 0;
   padding: 0;
 }
+
+.flex {
+  @include setFlex;
+}
 .circle {
   background-color: $primary-violet;
   @include setFlex;
@@ -44,6 +48,7 @@ body {
     line-height: 1.2;
     font-weight: 700;
   }
+
   h2 {
     color: $DarkPurpleColor;
     font-weight: 700;
@@ -66,12 +71,26 @@ body {
   a {
     text-decoration: none;
   }
-  input {
-    &:focus {
-      outline: none;
-      border: 1px solid $secondary-red;
-      border-radius: 8px;
-    }
+  .valid {
+    background-color: rgb(183, 241, 209);
+  }
+
+  .linkList {
+    max-width: 100%;
+  }
+  span {
+    font-size: 12px;
+    color: rgb(226, 93, 93);
+    width: 230px;
+    text-align: left;
+    padding: 2px;
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+  .invalid {
+    outline: none !important;
+    border: 2px solid rgb(226, 93, 93) !important;
+    border-radius: 8px !important;
   }
 }
 

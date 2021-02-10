@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <title>Document</title>
+    <script src='src/main.js' defer></script>
 </head>
 <body>
     <header class=py-1>
@@ -102,7 +103,10 @@
            </div>
          
            </div>
-           <img src="images/illustration-working.svg" alt="" class='py-1'>
+           <div class='imgContainer'>
+            <img src="images/illustration-working.svg" alt="" class='py-1'>
+           </div>
+          
      </div>
 
     
@@ -112,20 +116,25 @@
     </header>
     <main>
         <section>
-            <div class="wrapper">
+            <div class="wrapper form">
 
           
             <div class='formContainer'>
                 <form action="">
                     
-                    <input type="text" placeholder="Shorten a link here" class='my-1'>
-                    <button class='shorten-btn my-1'>Shorten it!</button>
+                    <input type="url" placeholder="Shorten a link here" class='my-1'>
+                   <span>Invalid link</span>
+                    <button class='shorten-btn my-1' id ='form-btn'>Shorten it!</button>
                 </form>
             </div>
            <div class="linkList">
-               <p></p>
-               <a href=""></a>
-               <button></button>
+               
+                <div class="linkCards py-2">
+
+                </div>
+          
+              
+           
            </div>
         </div>
         </section>
@@ -172,9 +181,7 @@
 <p>Improve brand awarness and content discoverability through customizable links, supercharging audience engagement.</p>
             </div>
         </div>
-            <div class="line">
-
-            </div>
+          
         </div>
     </div>
         </section>

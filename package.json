@@ -1,5 +1,23 @@
 {
   "devDependencies": {
-    "sass": "^1.32.6"
-  }
+    "eslint": "^7.19.0",
+    "sass": "^1.32.6",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "serve": "^11.3.2"
+  },
+  "name": "link-shortening",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:dev": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
