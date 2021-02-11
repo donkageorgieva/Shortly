@@ -33,17 +33,27 @@ class UI {
     copyALink(buttonArray){
         buttonArray.forEach(btn => {
             btn.addEventListener('click', (e)=> {
-                const link = e.target.closest('div').querySelector('a');
-                // link.select();
-                // link.setSelectionRange(0, 99999);
-                // document.execCommand('copy');
+                const divElement = btn.closest('div');
+                if (btn.classList.contains ('copied')){
+                    btn.classList.remove('copied');
+                }
+                const link = divElement.querySelector('a').textContent;
+              
+            navigator.clipboard.writeText(link);
+            
+
+           
 
             })
         })
     }
-
+   
 }
+class Storage {
+    static addToStorage(link){
 
+    }
+}
 class APIHandler extends UI{
     async shortenALink(link){
         this.loading();
@@ -53,27 +63,29 @@ class APIHandler extends UI{
            })
        
            let results = await response.json();
-          console.log(results);
+   
     
          const shortLink = results.result.full_short_link;
          const longLink = results.result.original_link;
          this.displayALink(longLink, shortLink);
         
        } catch(error){
-console.log(error);
+        
+        document.querySelector('input').classList.add('invalid');
+        this.loading();
        }
 
     }
     
 
 }
-let buttonClicked = false;
+
 class DOMHandler extends APIHandler {
     inputHandler(){
         const input = document.querySelector('form input');
         input.addEventListener('click', ()=> {
             if (input.focus){
-                input.select();
+                input.value.select();
               
             }
         })
@@ -83,7 +95,7 @@ class DOMHandler extends APIHandler {
      this.inputHandler;
     document.querySelector('.shorten-btn').addEventListener('click', (e)=>{
         e.preventDefault();
-
+       
        
      
         this.getTheLink();

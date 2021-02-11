@@ -99,6 +99,10 @@
   border-radius: 100%;
 }
 
+.copied {
+  background-color: #3b3054 !important;
+}
+
 .divider {
   width: 85%;
   height: 0.2px;
@@ -118,7 +122,6 @@ body button {
 body button:hover {
   transition: 0.2s ease-in;
   cursor: pointer;
-  transform: scale(1.05);
   background-color: #6be1e1;
 }
 body button:focus {
@@ -150,6 +153,9 @@ body main {
 }
 body a {
   text-decoration: none;
+}
+body a:hover {
+  cursor: pointer;
 }
 body .valid {
   background-color: #b7f1d1;
@@ -218,7 +224,7 @@ body .copy-btn {
   font-weight: 700;
   margin: 1.5rem 1rem;
   font-size: 18px;
-  padding: 0rem 0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .linksStyle {
@@ -229,22 +235,23 @@ body .copy-btn {
   margin: 3rem 0rem;
   justify-content: center;
   text-align: center;
-  align-items: center;
 }
 .linksStyle .flex {
   justify-content: center;
+  width: 300px;
 }
 .linksStyle div {
   max-width: 100%;
-  overflow: hidden;
   text-align: left;
   margin: 0 auto;
 }
+.linksStyle div button {
+  margin: 0px 10px;
+}
 .linksStyle div .py-2 {
-  width: 80%;
+  width: 300px;
 }
 .linksStyle div p {
-  margin: 0 0.5rem;
   font-size: 12px;
 }
 .linksStyle a {
@@ -407,6 +414,18 @@ footer .socialMediaLinks img:hover {
   transform: scale(1.2);
 }
 
+@media (max-width: 576px) {
+  .linksStyle .flex {
+    width: 260px;
+    align-items: center;
+  }
+  .linksStyle div .py-2 {
+    width: 260px;
+  }
+  .linksStyle div a {
+    font-size: 14px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1198px) {
   body h1 {
     width: 25rem;
@@ -427,12 +446,13 @@ footer .socialMediaLinks img:hover {
 
   .linksStyle {
     justify-content: flex-start;
+    align-items: center;
   }
   .linksStyle div {
-    overflow: inherit;
+    width: 550px;
   }
   .linksStyle .flex {
-    padding: 0rem 1rem 0rem;
+    align-items: center;
   }
 }
 @media (min-width: 1200px) {
@@ -502,6 +522,10 @@ footer .socialMediaLinks img:hover {
   }
   header .flexContainer .navigationLinks a {
     color: #807c8d;
+  }
+  header .flexContainer .navigationLinks:hover {
+    cursor: pointer;
+    color: red;
   }
   header .flex {
     display: flex;

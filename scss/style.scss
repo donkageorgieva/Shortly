@@ -19,7 +19,9 @@
   height: 85px;
   border-radius: 100%;
 }
-
+.copied {
+  background-color: $primary-violet !important;
+}
 .divider {
   width: 85%;
   height: 0.2px;
@@ -36,7 +38,7 @@ body {
     &:hover {
       transition: 0.2s ease-in;
       cursor: pointer;
-      transform: scale(1.05);
+
       background-color: lighten($primary-cyan, 16%);
     }
     &:focus {
@@ -70,6 +72,9 @@ body {
   }
   a {
     text-decoration: none;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .valid {
     background-color: rgb(183, 241, 209);

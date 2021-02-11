@@ -32,7 +32,7 @@ body {
     @include styleButton(8px);
     margin: 1.5rem 1rem;
     font-size: 18px;
-    padding: 0rem 0.5rem;
+    padding: 0.5rem 0.5rem;
   }
 }
 .linksStyle {
@@ -43,21 +43,23 @@ body {
   margin: 3rem 0rem;
   justify-content: center;
   text-align: center;
-  align-items: center;
+
   .flex {
     justify-content: center;
+    width: 300px;
   }
   div {
     max-width: 100%;
-    overflow: hidden;
+
     text-align: left;
     margin: 0 auto;
+    button {
+      margin: 0px 10px;
+    }
     .py-2 {
-      width: 80%;
+      width: 300px;
     }
     p {
-      margin: 0 0.5rem;
-
       font-size: 12px;
     }
   }
@@ -230,7 +232,22 @@ footer {
     }
   }
 }
-
+@media (max-width: $breakpoint-xs) {
+  .linksStyle {
+    .flex {
+      width: 260px;
+      align-items: center;
+    }
+    div {
+      .py-2 {
+        width: 260px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
 @media (min-width: $breakpoint-tablet) and (max-width: 1198px) {
   body {
     h1 {
@@ -253,11 +270,12 @@ footer {
   }
   .linksStyle {
     justify-content: flex-start;
+    align-items: center;
     div {
-      overflow: inherit;
+      width: 550px;
     }
     .flex {
-      padding: 0rem 1rem 0rem;
+      align-items: center;
     }
   }
 }
@@ -323,6 +341,10 @@ footer {
         }
         a {
           color: $lightBlue;
+        }
+        &:hover {
+          cursor: pointer;
+          color: red;
         }
       }
     }
