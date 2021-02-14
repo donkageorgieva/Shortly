@@ -97,6 +97,10 @@ body {
     border: 2px solid rgb(226, 93, 93) !important;
     border-radius: 8px !important;
   }
+
+  .login {
+    @include setFlex;
+  }
 }
 
 @import "_mobile";

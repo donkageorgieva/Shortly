@@ -117,6 +117,7 @@ nav {
 
     .navigationLinks {
       display: none;
+   
     }
     .active {
       background-color: $primary-cyan !important;
@@ -154,7 +155,7 @@ main {
     position: absolute;
     width: 90%;
     max-width: 100%;
-    background-image: url("./images/bg-shorten-mobile.svg");
+    background-image: url("/images/bg-shorten-mobile.svg");
     background-color: $primary-violet;
     background-position: right;
     background-repeat: no-repeat;
@@ -206,7 +207,7 @@ main {
 
   .getStarted {
     max-width: 100%;
-    background-image: url("./images/bg-boost-mobile.svg");
+    background-image: url("/images/bg-boost-mobile.svg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -228,6 +229,7 @@ footer {
         transition: 0.2s ease-in;
         cursor: pointer;
         transform: scale(1.2);
+    
       }
     }
   }
@@ -305,6 +307,11 @@ footer {
     max-width: 100%;
   }
   body {
+    .signUp-btn {
+    
+      padding: 10px 35px;
+
+    }
     h1 {
       width: 35rem;
       margin: 0 auto;
@@ -316,6 +323,7 @@ footer {
     }
   }
   header {
+
     height: 50rem;
     text-align: left;
     .flex {
@@ -336,16 +344,25 @@ footer {
 
       .navigationLinks {
         @include setFlex;
+        justify-content: space-between;
+        width: 100%;
+      
+        a{
+          color: $lightBlue;
+          &:hover{
+            color: $primary-violet;
+          }
+      
+       
+        } 
+      
         ul {
           display: flex;
+      
+     
         }
-        a {
-          color: $lightBlue;
-        }
-        &:hover {
-          cursor: pointer;
-          color: red;
-        }
+       
+     
       }
     }
     .flex {
@@ -364,7 +381,7 @@ footer {
       width: 80%;
       text-align: center;
       max-width: 100%;
-      background-image: url("./images/bg-shorten-mobile.svg");
+      background-image: url("/images/bg-shorten-mobile.svg");
       background-color: $primary-violet;
       background-position: bottom;
       background-repeat: no-repeat;
