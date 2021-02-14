@@ -117,7 +117,6 @@ nav {
 
     .navigationLinks {
       display: none;
-   
     }
     .active {
       background-color: $primary-cyan !important;
@@ -229,7 +228,6 @@ footer {
         transition: 0.2s ease-in;
         cursor: pointer;
         transform: scale(1.2);
-    
       }
     }
   }
@@ -308,9 +306,7 @@ footer {
   }
   body {
     .signUp-btn {
-    
       padding: 10px 35px;
-
     }
     h1 {
       width: 35rem;
@@ -323,7 +319,6 @@ footer {
     }
   }
   header {
-
     height: 50rem;
     text-align: left;
     .flex {
@@ -346,23 +341,17 @@ footer {
         @include setFlex;
         justify-content: space-between;
         width: 100%;
-      
-        a{
+
+        a {
           color: $lightBlue;
-          &:hover{
+          &:hover {
             color: $primary-violet;
           }
-      
-       
-        } 
-      
+        }
+
         ul {
           display: flex;
-      
-     
         }
-       
-     
       }
     }
     .flex {
