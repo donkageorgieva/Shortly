@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+/* eslint-disable indent */
 /* eslint-disable new-parens */
 /* eslint-disable semi */
 /* eslint-disable no-use-before-define */
@@ -29,9 +31,13 @@ class DOMHandler {
     const spanelement = document.querySelector('span');
     const inputElement = document.querySelector('input');
     if (link === '' || linkExists) {
+      document.querySelector('form').scrollIntoView();
       spanelement.style.opacity = '1';
 
       inputElement.classList.add('invalid');
+
+      // eslint-disable-next-line no-undef
+      $("html,body").animate({ scrollTop: $("form").offset().top }, 1000);
     } else {
       // eslint-disable-next-line no-constant-condition
       if ((spanelement.style.opacity = '1')) {

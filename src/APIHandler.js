@@ -3,7 +3,7 @@
 /* eslint-disable semi */
 import { UI } from './UI.js';
 import { Storage } from './Storage.js'
-import {DOMHandler} from './DOMHandler.js';
+import { DOMHandler } from './DOMHandler.js';
 // eslint-disable-next-line no-use-before-define
 export { APIHandler };
 
