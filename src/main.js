@@ -1,3 +1,5 @@
+/* eslint-disable padded-blocks */
+/* eslint-disable space-before-blocks */
 /* eslint-disable arrow-spacing */
 /* eslint-disable no-multiple-empty-lines */
 /* eslint-disable no-undef */
@@ -17,12 +19,17 @@ document.querySelector('.burgerMenu').addEventListener('click', () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   const storedLinks = Object.entries(localStorage);
+  // eslint-disable-next-line prefer-regex-literals
+  const regex = new RegExp('http');
   storedLinks.forEach((link) => {
-    const linkObject = JSON.parse(link[1]);
-    const shortLink = linkObject.full_short_link;
-    const longLink = JSON.parse(link[0]);
-    const ui = new UI();
-    ui.displayALink(longLink, shortLink);
+    if (regex.test(link[0])){
+      const linkObject = JSON.parse(link[1]);
+      const shortLink = linkObject.full_short_link;
+      const longLink = JSON.parse(link[0]);
+      const ui = new UI();
+      ui.displayALink(longLink, shortLink);
+    }
+
   });
 });
 
