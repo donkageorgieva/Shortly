@@ -58,6 +58,7 @@ body {
     }
     .py-2 {
       width: 300px;
+      overflow: hidden;
     }
     p {
       font-size: 12px;
@@ -277,6 +278,7 @@ footer {
     .flex {
       align-items: center;
     }
+
   }
 }
 @media (min-width: $breakpoint-desktopXL) {
@@ -294,6 +296,8 @@ footer {
     .flex {
       align-items: center;
     }
+
+  
   }
 
   .burgerLogo {
@@ -449,5 +453,7 @@ footer {
     .flex {
       align-items: center;
     }
+
+  
   }
 }

@@ -253,6 +253,7 @@ body .copy-btn {
 }
 .linksStyle div .py-2 {
   width: 300px;
+  overflow: hidden;
 }
 .linksStyle div p {
   font-size: 12px;
