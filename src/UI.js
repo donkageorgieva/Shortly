@@ -42,7 +42,9 @@ class UI {
     const generatedLink = document.createElement('div');
     generatedLink.classList.add('linksStyle');
     generatedLink.classList.add('my-1');
-    generatedLink.innerHTML = `<div class='m1'><p class='py-2'>${longLink} </p></div><div class='flex '> <a href="${shortLink}" class='py-2'>${shortLink} </a> <button class='copy-btn'> Copy</button></div>`;
+    generatedLink.innerHTML = `<div class='m1'><p class='py-2'>${longLink} </p>
+    </div><div class='flex '>
+     <a href="${shortLink}" class='py-2'>${shortLink} </a> <button class='copy-btn'> Copy</button></div>`;
     this.linkList.append(generatedLink);
 
     this.copyAlink(this.linkList);
